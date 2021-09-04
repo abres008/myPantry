@@ -42,7 +42,7 @@ function changeTextColor(obj){
 }
 
 function submit(){
-	console.log("Sumitted")
+	window.open('pantryHome.html','_self')
 }
 
 function populatePantryList(){
