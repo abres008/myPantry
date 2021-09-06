@@ -1,5 +1,7 @@
 *{
 	font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: #00009C;
 }
 
 body {
@@ -11,20 +13,19 @@ body {
 }
 
 button {
-	display: block;
+	display: inline;
 	background-color: red;
 	margin: 5px auto;
 	border: solid 0px;
 	border-radius: 3px;
+    width: auto;
+}
+
+button:active {
+    border: 1px solid black;
 }
 
 a {
-	float: left;
-	border: 2px solid #bd6f2f;
-	margin: 15px;
-	padding: 10px;
-	background-color: RGB(150,150,150,0.85);
-	border-radius: 3px;
 	text-decoration: none;
 	color: #00009C;
 }
@@ -35,22 +36,14 @@ a:hover {
 }
 
 div {
-	border: 1px solid white
+    border: 2px solid #bd6f2f;
+	padding: 10px;
+	background-color: RGB(150,150,150,0.85);
+	border-radius: 5px;
 }
 
 span {
 	border: 1px solid white
-}
-
-.myItems {
-	/*clear:left;
-	float: left;*/
-	border: 2px solid #bd6f2f;
-	margin: 15px;
-	padding: 10px 30px 10px 10px;
-	background-color: RGB(150,150,150,0.85);
-	border-radius: 3px;
-	color: #00009C;
 }
 
 table {
@@ -58,15 +51,41 @@ table {
 	border-spacing: 50px 0px;
 }
 
-.column{
-	float: left;
-	padding: 10px;
+input, label {
+    display: block;
+    width: 90%;
 }
 
-.column.bar{
-	width: 20%;
+.grid-container {
+    display: grid;
+    grid-gap: 1vh;
+    grid-template-columns: 15vw auto auto auto;
+    grid-template-rows: 5vh 30vh 25vh 10vh;
 }
 
-.column.main{
-	width: 50%
+.links {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 4;
+}
+
+.bar {
+    grid-row: 2 / span 3;
+    grid-column: 1 / span 1;
+}
+
+.myItems {
+	grid-row: 2 / span 2;
+    grid-column: 2 / span 3;
+    overflow: auto;
+}
+
+.below {
+	grid-row: 4 / span 1;
+    grid-column: 2 / span 3;
+}
+
+div.inputC {
+    border-style: none;
+    float: left;
+    width: 25%;
 }

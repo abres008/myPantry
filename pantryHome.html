@@ -5,33 +5,50 @@
         <title>My Pantry</title>
         <link rel="stylesheet" type="text/css" href="pantryHome.css">
     </head>
-    <body>
-        <div>
-            <a href="household.html">Choose new Household</a>
-        </div>
-        <br>
-        <div class="column bar">
-            <span>
-                something
-            </span>
-            <span>
-                something else
-            </span>
-        </div>
-        <div class="column main myItems">
-            <table>
-                <tr>
-                    <th>Item</th>
-                    <th>Quantity</th>
-                    <th>Exp Date</th>
-                </tr>
-                <tr>
-                    <td>Mac and Cheese</td>
-                    <td>12</td>
-                    <td>2022/03/31</td>
-                </tr>
-            </table>
+    <body onload="populateList()">
+        <div class="grid-container">
+            <div class="links">
+                <a href="household.html">Choose new Household</a>
+            </div>
+
+            <div class="bar">
+                <span>
+                    something
+                </span>
+                <span>
+                    something else
+                </span>
+            </div>
+
+            <div class="myItems">
+                <table id="itemTable">
+                    <thead>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Exp Date</th>
+                    </thead>
+                </table>
+            </div>
+
+            <div class="below">
+                <div class="inputC">
+                    <label>Item</label>
+                    <input type="text" id ="item">
+                </div>
+                <div class="inputC">
+                    <label>Quantity</label>
+                    <input type="number" id ="quantity">
+                </div>
+                <div class="inputC">
+                    <label>Exp Date</label>
+                    <input type="date" id ="expDate">
+                </div>
+                <div class="inputC">
+                    <button id="newItemBtn" onclick="submitItem()">Submit new item</button>
+                </div>
+            </div>
         </div>
         
     </body>
+    <script type="text/javascript" src="pantryHome.js"></script>
 </html>
